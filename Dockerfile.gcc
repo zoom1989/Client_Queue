@@ -1,0 +1,5 @@
+FROM gcc:latest
+WORKDIR /app
+COPY main.cpp .
+RUN g++ -std=c++17 -pthread main.cpp -o client_queue
+CMD ["./client_queue"]
